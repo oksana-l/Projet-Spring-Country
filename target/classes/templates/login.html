@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" media="all" href="../css/style.css">
+</head>
+<body>
+<h2 class="h2">COUNTRY</h2>
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Population</th>
+            <th>Continent</th>
+            <th>Language</th>
+        </tr>
+    </thead>
+    <tr th:each="country: ${country}">
+        <td th:text="${country.id}" />
+        <td th:text="${country.name}" />
+        <td th:text="${country.population}" />
+        <td th:text="${country.continent}" />
+        <td th:text="${country.language}" />
+    </tr>
+</table>
+</body>
+</html>
